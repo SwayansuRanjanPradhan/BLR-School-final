@@ -3661,7 +3661,7 @@ select:focus {
 }
 
 .main-menu.style2 .navigation > li {
-    margin-right: 52px;
+    margin-right: 25px;
 }
 .main-menu.style2 .navigation > li:last-child {
     margin-right: 0px;
@@ -3684,7 +3684,7 @@ select:focus {
 }
 
 .mainmenu-right.style2 {
-    margin-left: 40px;
+    margin-left: 25px;
 }
 .mainmenu-right.style2 .cart-box {
     float: left;
@@ -3693,12 +3693,58 @@ select:focus {
     position: relative;
     display: inline-block;
     float: right;
-    margin-left: 35px;
+    margin-left: 20px;
     padding: 20px 0;
 }
 .mainmenu-right.style2 .button a {
     line-height: 50px;
     padding: 0 20px 0;
+}
+
+@media only screen and (min-width: 992px) {
+    .header-style2 .inner-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 30px;
+    }
+    .logo-box-style2 {
+        margin: 12px 0;
+        float: none;
+        flex-shrink: 0;
+    }
+    .logo-box-style2 img {
+        max-height: 55px;
+        width: auto;
+        display: block;
+    }
+    .main-menu-box {
+        float: none;
+        display: flex;
+        align-items: center;
+    }
+    .main-menu.style2 {
+        float: none;
+    }
+    .mainmenu-right.style2 {
+        display: flex;
+        align-items: center;
+        float: none;
+    }
+    .mainmenu-right.style2 .outer-search-box {
+        float: none;
+        padding: 0;
+        margin-right: 15px;
+    }
+    .mainmenu-right.style2 .cart-box {
+        float: none;
+        margin: 0 15px 0 0;
+    }
+    .mainmenu-right.style2 .button {
+        float: none;
+        margin-left: 15px;
+        padding: 0;
+    }
 }
 
 
@@ -12987,6 +13033,74 @@ li .single-footer-contact-info .text p span{
 }
 .timer-box .subscribe-box .subscribe-form input::-moz-placeholder {
     color: #e66a0b;
+}
+
+/* Professional Small Philosophy Cards */
+.philosophy-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    transition: all 400ms ease;
+    margin-bottom: 30px;
+    border: 1px solid #f0f0f0;
+}
+.philosophy-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(230, 106, 11, 0.18);
+    border-color: #e66a0b;
+}
+.philosophy-card .card-img-holder {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+}
+.philosophy-card .card-img-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 500ms ease;
+}
+.philosophy-card:hover .card-img-holder img {
+    transform: scale(1.08);
+}
+.philosophy-card .card-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #e66a0b;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.philosophy-card .card-content-box {
+    padding: 22px 20px 24px;
+}
+.philosophy-card .card-content-box h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #27282c;
+    margin-bottom: 10px;
+    line-height: 24px;
+    transition: color 300ms ease;
+}
+.philosophy-card:hover .card-content-box h3 {
+    color: #e66a0b;
+}
+.philosophy-card .card-content-box p {
+    font-size: 14px;
+    line-height: 22px;
+    color: #666666;
+    margin: 0;
 }
 .timer-box .subscribe-box .subscribe-form input:-ms-input-placeholder {
     color: #e66a0b;
