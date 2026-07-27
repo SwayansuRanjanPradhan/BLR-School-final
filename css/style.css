@@ -13319,3 +13319,97 @@ li .single-footer-contact-info .text p span{
     color: #e66a0b !important;
     font-weight: 600;
 }
+
+/* Admissions Attention Bar Style */
+.admission-attention-bar {
+    background: linear-gradient(90deg, #1e293b 0%, #1e3a8a 40%, #f97316 100%);
+    color: #ffffff;
+    padding: 11px 0;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    position: relative;
+    z-index: 99;
+}
+
+.admission-attention-bar .attention-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.admission-attention-bar .attention-badge {
+    background: #dc2626;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    box-shadow: 0 2px 10px rgba(220, 38, 38, 0.4);
+}
+
+.admission-attention-bar .pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulseAnimation 1.5s infinite ease-in-out;
+}
+
+@keyframes pulseAnimation {
+    0% { transform: scale(0.8); opacity: 0.6; }
+    50% { transform: scale(1.4); opacity: 1; }
+    100% { transform: scale(0.8); opacity: 0.6; }
+}
+
+.admission-attention-bar .attention-text {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.admission-attention-bar .attention-text strong {
+    font-weight: 800;
+    color: #fef08a;
+}
+
+.admission-attention-bar .attention-btn {
+    background: #ffffff;
+    color: #1e3a8a !important;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 18px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.admission-attention-bar .attention-btn:hover {
+    background: #fef08a;
+    color: #0f172a !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 767px) {
+    .admission-attention-bar .attention-text {
+        font-size: 14px;
+    }
+    .admission-attention-bar .attention-content {
+        gap: 8px;
+    }
+}
+

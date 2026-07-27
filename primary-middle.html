@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Primary to Middle School Curriculum || Academic Heights Public School</title>
+
+    <!-- responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- master stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive stylesheet -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+
+    <!-- Google Fonts for Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .primary-hero-box {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 45px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            border-left: 6px solid #F78F1E;
+            margin-bottom: 45px;
+            border-top: 1px solid #f1f5f9;
+            border-right: 1px solid #f1f5f9;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .primary-badge {
+            background: linear-gradient(135deg, #2B53B4 0%, #1a3880 100%);
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 7px 18px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 12px rgba(43, 83, 180, 0.25);
+        }
+
+        .hero-pillars-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .hero-pillar-tag {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 30px;
+            padding: 8px 18px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #334155;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-pillar-tag i {
+            color: #F78F1E;
+        }
+
+        .subject-card-box {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 32px 28px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            transition: all 0.35 ease;
+            border: 1px solid #f1f5f9;
+            height: calc(100% - 30px);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .subject-card-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #2B53B4, #F78F1E);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .subject-card-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 35px rgba(43, 83, 180, 0.12);
+            border-color: #e2e8f0;
+        }
+
+        .subject-card-box:hover::before {
+            opacity: 1;
+        }
+
+        .subject-card-box .icon-box {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #2B53B4 0%, #1a3880 100%);
+            color: #ffffff;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            margin-bottom: 22px;
+            box-shadow: 0 6px 16px rgba(43, 83, 180, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .subject-card-box:hover .icon-box {
+            background: linear-gradient(135deg, #F78F1E 0%, #d97706 100%);
+            box-shadow: 0 6px 16px rgba(247, 143, 30, 0.35);
+            transform: scale(1.05);
+        }
+
+        .subject-card-box h4 {
+            font-size: 21px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 12px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .subject-card-box p {
+            font-size: 15px;
+            line-height: 1.65;
+            color: #64748b;
+            margin: 0;
+        }
+
+        .subject-number {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            font-size: 24px;
+            font-weight: 800;
+            color: #e2e8f0;
+            font-family: 'Montserrat', sans-serif;
+            transition: color 0.3s ease;
+        }
+
+        .subject-card-box:hover .subject-number {
+            color: #fdba74;
+        }
+
+        .curriculum-download-card {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 16px;
+            padding: 45px 40px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.22);
+            margin-top: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .curriculum-download-card h3 {
+            color: #ffffff;
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .curriculum-download-card p {
+            color: #94a3b8;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .btn-download-syllabus {
+            background: #F78F1E;
+            color: #ffffff !important;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(247, 143, 30, 0.35);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+        }
+
+        .btn-download-syllabus:hover {
+            background: #2B53B4;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(43, 83, 180, 0.4);
+        }
+
+        .teaching-card-box {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 24px 22px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid #f1f5f9;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .teaching-card-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(43, 83, 180, 0.12);
+            border-color: #2B53B4;
+        }
+
+        .teaching-card-box .t-icon {
+            width: 52px;
+            height: 52px;
+            min-width: 52px;
+            background: rgba(43, 83, 180, 0.08);
+            color: #2B53B4;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            transition: all 0.3s ease;
+        }
+
+        .teaching-card-box:hover .t-icon {
+            background: #2B53B4;
+            color: #ffffff;
+        }
+
+        .teaching-card-box h4 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .facility-card-box {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 26px 22px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid #f1f5f9;
+            transition: all 0.3s ease;
+            text-align: center;
+            height: calc(100% - 25px);
+        }
+
+        .facility-card-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 32px rgba(247, 143, 30, 0.15);
+            border-color: #F78F1E;
+        }
+
+        .facility-card-box .f-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 16px;
+            background: linear-gradient(135deg, #fff5ed 0%, #ffedd5 100%);
+            color: #F78F1E;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .facility-card-box:hover .f-icon {
+            background: linear-gradient(135deg, #F78F1E 0%, #d97706 100%);
+            color: #ffffff;
+            transform: scale(1.08);
+        }
+
+        .facility-card-box h4 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .core-value-card-box {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 26px 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid #f1f5f9;
+            transition: all 0.3s ease;
+            text-align: center;
+            border-top: 4px solid #2B53B4;
+            height: calc(100% - 25px);
+        }
+
+        .core-value-card-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 32px rgba(43, 83, 180, 0.15);
+            border-top-color: #F78F1E;
+        }
+
+        .core-value-card-box .v-badge {
+            width: 45px;
+            height: 45px;
+            margin: 0 auto 14px;
+            background: #f8fafc;
+            color: #2B53B4;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .core-value-card-box:hover .v-badge {
+            background: #F78F1E;
+            color: #ffffff;
+        }
+
+        .core-value-card-box h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 6px;
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxed_wrapper">
+
+        <div class="preloader"></div>
+
+        <!-- Start Top Bar style2 -->
+        <section class="top-bar-style2">
+            <div class="top-style2 clearfix">
+                <div class="top-style2-left">
+                    <p><span class="icon-music"></span>We have Answers</p>
+                    <ul>
+                        <li><a href="tel:+918050065050" style="color: inherit;">+91 8050065050</a></li>
+                        <li><a href="mailto:admissions@ahpsvarthur.com"
+                                style="color: inherit;">admissions@ahpsvarthur.com</a></li>
+                        <li>Mon - Sat: 8:30am to 4:30pm</li>
+                    </ul>
+                </div>
+                <div class="top-style2-right">
+                    <ul class="top-right-menu">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                    <ul class="topbar-social-links">
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End Top Bar style2 -->
+
+        <!--Start Main Header-->
+        <header class="main-header header-style2 stricky">
+            <div class="inner-container clearfix">
+                <div class="logo-box-style2 float-left">
+                    <a href="index.html">
+                        <img src="images/brand/logo.png" alt="Academic Heights Public School Logo">
+                    </a>
+                </div>
+                <div class="main-menu-box float-right">
+                    <nav class="main-menu style2 clearfix">
+                        <div class="navbar-header clearfix">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation clearfix">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="dropdown"><a href="about.html">About Us</a>
+                                    <ul>
+                                        <li><a href="about.html">Our Story</a></li>
+                                        <li><a href="vision-mission.html">Vision & Mission</a></li>
+                                        <li><a href="leadership.html">Leadership</a></li>
+                                        <li><a href="our-team.html">Our Team</a></li>
+                                        <li><a href="testimonials.html">Testimonial</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown current"><a href="academic.html">Academics</a>
+                                    <ul>
+                                        <li><a href="academic.html">Academics Overview</a></li>
+                                        <li><a href="curriculum.html">Curriculum (PDF)</a></li>
+                                        <li><a href="primary-middle.html">Primary to Middle</a></li>
+                                        <li><a href="co-curriculum.html">Co-Curriculum</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="project.html">Admissions</a>
+                                    <ul>
+                                        <li><a href="project.html">Admission Process</a></li>
+                                        <li><a href="transport.html">Transport</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="events-gallery.html">Events &amp; Gallery</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!--End Main Header-->
+
+        <!--Start Admission Attention Bar-->
+        <div class="admission-attention-bar">
+            <div class="container">
+                <div class="attention-content">
+                    <span class="attention-badge"><span class="pulse-dot"></span> ADMISSIONS OPEN</span>
+                    <span class="attention-text">🎓 <strong>Admission Open For 2026 Batch</strong> &mdash; Enroll Your Child for Academic Excellence!</span>
+                    <a href="admission-process.html" class="attention-btn">Apply Now <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <!--End Admission Attention Bar-->
+
+        <!--Start Breadcrumb Area-->
+        <section class="breadcrumb-area" style="background-image: url(images/resources/breadcrumb-bg.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="inner-content clearfix">
+                            <div class="title">
+                                <h1>PRIMARY TO MIDDLE</h1>
+                            </div>
+                            <div class="breadcrumb-menu float-right">
+                                <ul class="clearfix">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="javascript:void(0)">Academics</a></li>
+                                    <li class="active">Primary to Middle</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Breadcrumb Area-->
+
+        <!--Start Main Primary to Middle Content Section-->
+        <section style="padding: 90px 0 70px; background: #f8fafc;">
+            <div class="container">
+
+                <!-- Hero Overview Box Design -->
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="primary-hero-box">
+                            <span class="primary-badge">Academic Stage: Grades 1 – 8</span>
+                            <h2
+                                style="font-size: 36px; font-weight: 800; color: #1e293b; margin-bottom: 16px; font-family: 'Montserrat', sans-serif;">
+                                PRIMARY TO MIDDLE CURRICULUM
+                            </h2>
+                            <p
+                                style="font-size: 19px; line-height: 1.8; color: #334155; font-weight: 500; margin-bottom: 0;">
+                                A balanced curriculum that strengthens conceptual understanding while encouraging
+                                creativity and inquiry.
+                            </p>
+                            <div class="hero-pillars-wrap">
+                                <span class="hero-pillar-tag"><i class="fa fa-check-circle"></i> Conceptual
+                                    Clarity</span>
+                                <span class="hero-pillar-tag"><i class="fa fa-check-circle"></i> Experiential
+                                    Learning</span>
+                                <span class="hero-pillar-tag"><i class="fa fa-check-circle"></i> Creative Inquiry</span>
+                                <span class="hero-pillar-tag"><i class="fa fa-check-circle"></i> Holistic
+                                    Development</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section Header for Subjects -->
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="sec-title text-center" style="margin-bottom: 50px;">
+                            <p
+                                style="color: #F78F1E; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px;">
+                                Academic Disciplines</p>
+                            <div class="title" style="font-size: 36px; font-weight: 800;">Subjects <span>Included</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11 Subject Cards Box Grid -->
+                <div class="row">
+                    <!-- 1. English -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">01</span>
+                            <div class="icon-box"><i class="fa fa-book"></i></div>
+                            <h4>English</h4>
+                            <!-- <p>Developing effective verbal and written communication, comprehensive reading skills, creative writing, grammar mastery, and literary appreciation.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 2. Mathematics -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">02</span>
+                            <div class="icon-box"><i class="fa fa-calculator"></i></div>
+                            <h4>Mathematics</h4>
+                            <!-- <p>Strengthening numerical fluency, logical reasoning, problem-solving techniques, geometry, algebra fundamentals, and real-world math applications.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 3. Environmental Studies -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">03</span>
+                            <div class="icon-box"><i class="fa fa-leaf"></i></div>
+                            <h4>Environmental Studies</h4>
+                            <!-- <p>Instilling awareness of ecosystems, natural resources, community living, sustainability habits, and environmental stewardship from an early age.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 4. Science -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">04</span>
+                            <div class="icon-box"><i class="fa fa-flask"></i></div>
+                            <h4>Science</h4>
+                            <!-- <p>Fostering scientific curiosity through hands-on experiments, scientific methods, physical world exploration, and foundational Physics, Chemistry, & Biology.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 5. Social Studies -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">05</span>
+                            <div class="icon-box"><i class="fa fa-globe"></i></div>
+                            <h4>Social Studies</h4>
+                            <!-- <p>Exploring History, Geography, Civics, and world cultures to cultivate informed, empathetic, and responsible global citizens.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 6. Computer Science -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">06</span>
+                            <div class="icon-box"><i class="fa fa-laptop"></i></div>
+                            <h4>Computer Science</h4>
+                            <!-- <p>Empowering students with digital literacy, computational logic, basic coding principles, software tools, and safe internet practices.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 7. General Knowledge -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">07</span>
+                            <div class="icon-box"><i class="fa fa-lightbulb-o"></i></div>
+                            <h4>General Knowledge</h4>
+                            <!-- <p>Expanding horizons through current affairs, global discoveries, interactive quizzes, analytical brain teasers, and general awareness activities.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 8. Art & Craft -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">08</span>
+                            <div class="icon-box"><i class="fa fa-paint-brush"></i></div>
+                            <h4>Art &amp; Craft</h4>
+                            <!-- <p>Encouraging visual creativity, color exploration, sketching, crafting projects, and imaginative design through hands-on artistic workshops.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 9. Music -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">09</span>
+                            <div class="icon-box"><i class="fa fa-music"></i></div>
+                            <h4>Music</h4>
+                            <!-- <p>Cultivating vocal harmony, rhythm awareness, appreciation of diverse musical styles, and joyful auditory performance.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 10. Dance -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">10</span>
+                            <div class="icon-box"><i class="fa fa-child"></i></div>
+                            <h4>Dance</h4>
+                            <!-- <p>Developing physical rhythm, body coordination, cultural dance techniques, poise, and expressive performance confidence.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 11. Physical Education -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">11</span>
+                            <div class="icon-box"><i class="fa fa-trophy"></i></div>
+                            <h4>Physical Education</h4>
+                            <!-- <p>Building stamina, team spirit, sportsmanship, physical fitness routines, and healthy athletic discipline through indoor and outdoor sports.</p> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download & Inquiry Banner Box -->
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="curriculum-download-card">
+                            <div>
+                                <h3>Explore Our Grade-Wise Primary &amp; Middle Syllabus</h3>
+                                <!-- <p>Learn more about our teaching methodologies, evaluation system, and academic schedule.</p> -->
+                            </div>
+                            <div>
+                                <a href="contact.html" class="btn-download-syllabus">
+                                    <i class="fa fa-envelope" style="font-size: 18px;"></i> Inquire For Admissions
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!--End Main Content Section-->
+
+        <!--Start Footer Area Style4-->
+        <footer class="footer-area style4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-footer-widget marbtm50-s4">
+                            <div class="our-info-box">
+                                <div class="footer-logo">
+                                    <a href="index.html">
+                                        <img src="images/footer/footer-logo.png"
+                                            alt="Academic Heights Public School Logo">
+                                    </a>
+                                </div>
+                                <div class="text">
+                                    <p>Academic Heights Public School is dedicated to nurturing curiosity, creativity,
+                                        and leadership in every student, preparing them for academic success and life.
+                                    </p>
+                                </div>
+                                <div class="follow-us-social-links clearfix">
+                                    <span>Follow Us On:</span>
+                                    <ul>
+                                        <li><a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-footer-widget s4">
+                            <div class="title-s4">
+                                <h3>Quick Links</h3>
+                            </div>
+                            <div class="single-footer-link-box clearfix">
+                                <ul class="clearfix">
+                                    <li><a href="about.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #e66a0b;"></i>About Us</a></li>
+                                    <li><a href="primary-middle.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #e66a0b;"></i>Primary to Middle</a>
+                                    </li>
+                                    <li><a href="curriculum.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #e66a0b;"></i>Curriculum (PDF)</a></li>
+                                    <li><a href="project.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #e66a0b;"></i>Admissions</a></li>
+                                    <li><a href="contact.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #e66a0b;"></i>Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                        <div class="single-footer-widget s4">
+                            <div class="title-s4">
+                                <h3>Contact Information</h3>
+                            </div>
+                            <div class="footer-contact-info-s4">
+                                <ul>
+                                    <li>
+                                        <div class="icon"><i class="fa fa-map-marker"></i></div>
+                                        <div class="text">
+                                            <p>Sy No. 46/8, Chikkanekundi, Dommasandra Road, Varthur, Bangalore, India,
+                                                560087</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon"><i class="fa fa-phone"></i></div>
+                                        <div class="text">
+                                            <p><a href="tel:+918050065050">+91 8050065050</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon"><i class="fa fa-envelope"></i></div>
+                                        <div class="text">
+                                            <p><a
+                                                    href="mailto:admissions@ahpsvarthur.com">admissions@ahpsvarthur.com</a>
+                                            </p>
+                                            <p><a href="mailto:support@ahpsvarthur.com">support@ahpsvarthur.com</a></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End Footer Area Style4-->
+
+        <!--Start Footer Bottom Area-->
+        <section class="footer-bottom-area style3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="copyright-text text-center">
+                            <p>© 2026 <a href="index.html">Academic Heights Public School</a>. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Footer Bottom Area-->
+
+    </div>
+
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/jquery.bootstrap-touchspin.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.enllax.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/jquery.paroller.min.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/wow.js"></script>
+
+    <!-- thm custom script -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>

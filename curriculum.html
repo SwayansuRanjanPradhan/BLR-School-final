@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Our Story || Academic Heights Public School</title>
+    <title>Our Curriculum || Academic Heights Public School</title>
 
     <!-- responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,16 +19,131 @@
     <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
 
-    <!-- Fix dropdown visibility & menu hover issue without changing existing code -->
     <style>
-        .main-menu.style2 .navigation>li>ul {
-            top: 100% !important;
-            margin-top: 0 !important;
+        .curriculum-hero-box {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            border-left: 6px solid #F78F1E;
+            margin-bottom: 40px;
         }
 
-        .main-menu.style2 .navigation>li {
-            padding-top: 15px !important;
-            padding-bottom: 15px !important;
+        .curriculum-badge {
+            background: #2B53B4;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .focus-area-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 30px 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #f1f5f9;
+            height: calc(100% - 30px);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .focus-area-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(43, 83, 180, 0.12);
+            border-color: #F78F1E;
+        }
+
+        .focus-area-card .icon-box {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #2B53B4 0%, #1a3880 100%);
+            color: #ffffff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 15px rgba(43, 83, 180, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .focus-area-card:hover .icon-box {
+            background: linear-gradient(135deg, #F78F1E 0%, #d97706 100%);
+            box-shadow: 0 6px 15px rgba(247, 143, 30, 0.35);
+        }
+
+        .focus-area-card h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 12px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .focus-area-card p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #64748b;
+            margin: 0;
+        }
+
+        .pdf-download-banner {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 16px;
+            padding: 40px 35px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.2);
+            margin-top: 20px;
+        }
+
+        .pdf-download-banner h3 {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .pdf-download-banner p {
+            color: #94a3b8;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .btn-pdf-download {
+            background: #F78F1E;
+            color: #ffffff !important;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 18px rgba(247, 143, 30, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-pdf-download:hover {
+            background: #2B53B4;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(43, 83, 180, 0.4);
         }
     </style>
 </head>
@@ -44,22 +159,22 @@
                 <div class="top-style2-left">
                     <p><span class="icon-music"></span>We have Answers</p>
                     <ul>
-                        <li>+324 123 45 978</li>
-                        <li>abc@yourdomain.com</li>
-                        <li>Mon - Sat: 9am to 6pm</li>
+                        <li><a href="tel:+918050065050" style="color: inherit;">+91 8050065050</a></li>
+                        <li><a href="mailto:admissions@ahpsvarthur.com"
+                                style="color: inherit;">admissions@ahpsvarthur.com</a></li>
+                        <li>Mon - Sat: 8:30am to 4:30pm</li>
                     </ul>
                 </div>
                 <div class="top-style2-right">
                     <ul class="top-right-menu">
-                        <li><a href="#">Partners</a></li>
-                        <li><a href="#">Media</a></li>
-                        <li><a href="#">360O View</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
                     </ul>
                     <ul class="topbar-social-links">
                         <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
@@ -72,7 +187,7 @@
             <div class="inner-container clearfix">
                 <div class="logo-box-style2 float-left">
                     <a href="index.html">
-                        <img src="images/brand/logo.png" alt="Awesome Logo">
+                        <img src="images/brand/logo.png" alt="Academic Heights Public School Logo">
                     </a>
                 </div>
                 <div class="main-menu-box float-right">
@@ -87,10 +202,8 @@
                         </div>
                         <div class="navbar-collapse collapse clearfix">
                             <ul class="navigation clearfix">
-                                <li><a href="index.html">Home</a>
-
-                                </li>
-                                <li class="dropdown current"><a href="javascript:void(0)">About Us</a>
+                                <li><a href="index.html">Home</a></li>
+                                <li class="dropdown"><a href="about.html">About Us</a>
                                     <ul>
                                         <li><a href="about.html">Our Story</a></li>
                                         <li><a href="vision-mission.html">Vision & Mission</a></li>
@@ -99,7 +212,7 @@
                                         <li><a href="testimonials.html">Testimonial</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown"><a href="academic.html">Academics</a>
+                                <li class="dropdown current"><a href="academic.html">Academics</a>
                                     <ul>
                                         <li><a href="academic.html">Academics Overview</a></li>
                                         <li><a href="curriculum.html">Curriculum (PDF)</a></li>
@@ -114,10 +227,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="events-gallery.html">Events &amp; Gallery</a></li>
-                                <li><a href="blog.html">Blog</a>
-
-                                </li>
-
+                                <li><a href="blog.html">Blog</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
@@ -146,13 +256,13 @@
                     <div class="col-xl-12">
                         <div class="inner-content clearfix">
                             <div class="title">
-                                <h1>Our Story</h1>
+                                <h1>OUR CURRICULUM</h1>
                             </div>
                             <div class="breadcrumb-menu float-right">
                                 <ul class="clearfix">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="javascript:void(0)">About Us</a></li>
-                                    <li class="active">Our Story</li>
+                                    <li><a href="javascript:void(0)">Academics</a></li>
+                                    <li class="active">Curriculum</li>
                                 </ul>
                             </div>
                         </div>
@@ -162,56 +272,124 @@
         </section>
         <!--End breadcrumb area-->
 
-        <!--Start Company Overview Area / Our Story-->
-        <section class="company-overview-area"
-            style="padding: 90px 0 100px; background: linear-gradient(180deg, #ffffff 0%, #f9f9fb 100%);">
+        <!--Start Curriculum Overview Area-->
+        <section class="curriculum-overview-area" style="padding: 90px 0 60px; background: #f8fafc;">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-7 col-lg-7 col-md-12">
-                        <div class="intro-box clearfix" style="padding-right: 25px;">
-                            <div class="sec-title" style="margin-bottom: 25px;">
-                                <p
-                                    style="color: #e66a0b; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px;">
-                                    Welcome to Academic Heights Public School</p>
-                                <div class="title"
-                                    style="font-size: 38px; line-height: 48px; font-weight: 800; color: #1a1a1a;">
-                                    Nurturing Minds, <span style="color: #e66a0b;">Preparing for Life</span></div>
-                            </div>
-                            <div class="text">
-                                <p
-                                    style="font-size: 18px; line-height: 32px; font-weight: 600; color: #27282c; margin-bottom: 22px; border-left: 4px solid #e66a0b; padding: 14px 20px; background: #fff5ed; border-radius: 0 10px 10px 0; box-shadow: 0 4px 15px rgba(230,106,11,0.06);">
-                                    Academic Heights Public School was established with the vision of providing quality
-                                    education that prepares children not only for academic success but also for life.
-                                </p>
-                                <p style="font-size: 16px; line-height: 30px; color: #555555; margin-bottom: 0;">
-                                    We strive to create an environment where curiosity is encouraged, creativity is
-                                    celebrated, and every learner is empowered to achieve their fullest potential. Our
-                                    educational philosophy focuses on developing confident communicators, critical
-                                    thinkers, compassionate leaders, and responsible citizens.
-                                </p>
-                            </div>
+                <!-- Hero Overview Box -->
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="curriculum-hero-box">
+                            <span class="curriculum-badge">Early Years (Nursery–UKG)</span>
+                            <h2
+                                style="font-size: 36px; font-weight: 800; color: #1e293b; margin-bottom: 15px; font-family: 'Montserrat', sans-serif;">
+                                OUR CURRICULUM
+                            </h2>
+                            <p
+                                style="font-size: 18px; line-height: 1.8; color: #475569; font-weight: 500; margin-bottom: 0;">
+                                Learning through exploration, play, stories, music, movement, and hands-on experiences.
+                            </p>
                         </div>
                     </div>
-                    <div class="col-xl-5 col-lg-5 col-md-12">
-                        <div class="story-image-box"
-                            style="position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12); border: 6px solid #ffffff; margin-top: 15px;">
-                            <img src="images/resources/language_development1.jpeg"
-                                alt="Academic Heights Public School - Our Story"
-                                style="width: 100%; height: 380px; object-fit: cover; display: block;">
-                            <div
-                                style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.75) 100%); padding: 25px 20px 20px;">
-                                <h4 style="color: #ffffff; font-size: 20px; font-weight: 700; margin: 0 0 4px;">Our Most
-                                    Respected Management</h4>
-                                <p
-                                    style="color: #e66a0b; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin: 0;">
-                                    THE BOARD OF DIRECTORS</p>
+                </div>
+
+                <!-- Section Title for Focus Areas -->
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="sec-title text-center" style="margin-bottom: 50px;">
+                            <p
+                                style="color: #F78F1E; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px;">
+                                Key Pillars of Growth</p>
+                            <div class="title" style="font-size: 36px; font-weight: 800;">Core <span>Focus Areas</span>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- 6 Focus Areas Grid -->
+                <div class="row">
+                    <!-- 1. Language Development -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="focus-area-card">
+                            <div class="icon-box"><i class="fa fa-comments-o"></i></div>
+                            <h4>Language Development</h4>
+                            <p>Developing listening, speaking, reading, and early writing skills through storytelling,
+                                phonics, vocabulary games, and expressive communication.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Numeracy Skills -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="focus-area-card">
+                            <div class="icon-box"><i class="fa fa-calculator"></i></div>
+                            <h4>Numeracy Skills</h4>
+                            <p>Building foundational mathematical concepts including number sense, counting, patterns,
+                                shapes, spatial awareness, and logical thinking.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Social & Emotional Development -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="focus-area-card">
+                            <div class="icon-box"><i class="fa fa-heartbeat"></i></div>
+                            <h4>Social & Emotional Development</h4>
+                            <p>Fostering self-confidence, empathy, sharing, cooperation, emotion management, and
+                                building healthy peer relationships in a supportive environment.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Gross & Fine Motor Skills -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="focus-area-card">
+                            <div class="icon-box"><i class="fa fa-child"></i></div>
+                            <h4>Gross & Fine Motor Skills</h4>
+                            <p>Enhancing physical coordination, balance, agility, hand-eye control through outdoor play,
+                                gymnastics, sensory activities, and fine manipulation.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Creativity & Imagination -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="focus-area-card">
+                            <div class="icon-box"><i class="fa fa-paint-brush"></i></div>
+                            <h4>Creativity & Imagination</h4>
+                            <p>Encouraging artistic expression, imaginative role-play, music, dance, rhythm, drama, and
+                                open-ended creative exploration.</p>
+                        </div>
+                    </div>
+
+                    <!-- 6. Environmental Awareness -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="focus-area-card">
+                            <div class="icon-box"><i class="fa fa-globe"></i></div>
+                            <h4>Environmental Awareness</h4>
+                            <p>Inspiring natural curiosity about nature, animals, weather, healthy living habits, and
+                                caring for the world around us.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download PDF Action Banner -->
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="pdf-download-banner">
+                            <div>
+                                <h3>Download Complete Curriculum Guide (PDF)</h3>
+                                <p>Get comprehensive details about our Early Years & Grade-wise academic framework.</p>
+                            </div>
+                            <div>
+                                <a href="javascript:void(0)"
+                                    onclick="alert('Curriculum PDF Prospectus is being prepared for download.')"
+                                    class="btn-pdf-download">
+                                    <i class="fa fa-file-pdf-o" style="font-size: 18px;"></i> Download Curriculum PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
-        <!--End Company Overview Area-->
+        <!--End Curriculum Overview Area-->
 
         <!--Start Footer Area Style4-->
         <footer class="footer-area style4">
@@ -252,8 +430,8 @@
                                 <ul class="clearfix">
                                     <li><a href="about.html"><i class="fa fa-angle-right"
                                                 style="margin-right: 8px; color: #e66a0b;"></i>About Us</a></li>
-                                    <li><a href="services.html"><i class="fa fa-angle-right"
-                                                style="margin-right: 8px; color: #e66a0b;"></i>Academics</a></li>
+                                    <li><a href="curriculum.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #e66a0b;"></i>Curriculum </a></li>
                                     <li><a href="project.html"><i class="fa fa-angle-right"
                                                 style="margin-right: 8px; color: #e66a0b;"></i>Admissions</a></li>
                                     <li><a href="blog.html"><i class="fa fa-angle-right"
@@ -319,13 +497,25 @@
 
     </div>
 
-    <!-- Scroll Top Button -->
-    <button class="scroll-top scroll-to-target" data-target="html">
-        <span class="icon-angle-up"></span>
-    </button>
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
 
     <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/jquery.bootstrap-touchspin.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.enllax.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/jquery.paroller.min.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/wow.js"></script>
+
+    <!-- thm custom script -->
     <script src="js/custom.js"></script>
 
 </body>
