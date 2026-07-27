@@ -132,6 +132,7 @@
         }
 
         .form-group-custom input,
+        .form-group-custom select,
         .form-group-custom textarea {
             width: 100%;
             padding: 14px 20px 14px 48px;
@@ -144,13 +145,21 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        .form-group-custom select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+        }
+
         .form-group-custom textarea {
-            height: 140px;
+            height: 120px;
             resize: vertical;
             padding-top: 14px;
         }
 
         .form-group-custom input:focus,
+        .form-group-custom select:focus,
         .form-group-custom textarea:focus {
             border-color: #e66a0b;
             background: #ffffff;
@@ -164,6 +173,7 @@
             top: 16px;
             color: #e66a0b;
             font-size: 16px;
+            z-index: 2;
         }
 
         .map-wrapper {
@@ -250,7 +260,7 @@
                                 </li>
                                 <li class="dropdown"><a href="javascript:void(0)">About Us</a>
                                     <ul>
-                                        <li><a href="about.html">Our Story</a></li>
+                                        <li><a href="our-story.html">Our Story</a></li>
                                         <li><a href="vision-mission.html">Vision & Mission</a></li>
                                         <li><a href="leadership.html">Leadership</a></li>
                                         <li><a href="our-team.html">Our Team</a></li>
@@ -260,7 +270,7 @@
                                 <li class="dropdown"><a href="academic.html">Academics</a>
                                     <ul>
                                         <li><a href="academic.html">Academics Overview</a></li>
-                                        <li><a href="curriculum.html">Curriculum (PDF)</a></li>
+                                        <li><a href="curriculum.html">Curriculum</a></li>
                                         <li><a href="primary-middle.html">Primary to Middle</a></li>
                                         <li><a href="co-curriculum.html">Co-Curriculum</a></li>
                                     </ul>
@@ -272,10 +282,8 @@
                                     </ul>
                                 </li>
                                 <li><a href="events-gallery.html">Events &amp; Gallery</a></li>
-                                <li><a href="blog.html">Blog</a>
-
-                                </li>
-
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="https://mauranipur.academicheights.in/mandatorypublicdisclosure/" target="_blank">Disclosure</a></li>
                                 <li class="current"><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
@@ -290,8 +298,10 @@
             <div class="container">
                 <div class="attention-content">
                     <span class="attention-badge"><span class="pulse-dot"></span> ADMISSIONS OPEN</span>
-                    <span class="attention-text">🎓 <strong>Admission Open For 2026 Batch</strong> &mdash; Enroll Your Child for Academic Excellence!</span>
-                    <a href="admission-process.html" class="attention-btn">Apply Now <i class="fa fa-arrow-right"></i></a>
+                    <span class="attention-text">🎓 <strong>Admission Open For 2026 Batch</strong> &mdash; Enroll Your
+                        Child for Academic Excellence!</span>
+                    <a href="admission-process.html" class="attention-btn">Apply Now <i
+                            class="fa fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -391,48 +401,80 @@
         <section class="contact-section-wrapper">
             <div class="container">
                 <div class="sec-title text-center" style="margin-bottom: 45px;">
-                    <span class="school-badge">Get In Touch</span>
+                    <span class="school-badge">Online Admission &amp; Inquiry</span>
                     <div class="title" style="font-size: 34px; font-weight: 800; color: #1a1a1a;">
-                        Have Questions? <span style="color: #e66a0b;">Reach Out To Us</span>
+                        Apply For Admission <span style="color: #e66a0b;">Or Contact Us</span>
                     </div>
                     <p
-                        style="color: #666; font-size: 16px; margin-top: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">
-                        We are here to assist you with admissions, campus visits, or any inquiry about Academic Heights
-                        Public School.
+                        style="color: #666; font-size: 16px; margin-top: 10px; max-width: 620px; margin-left: auto; margin-right: auto;">
+                        Fill out the admission inquiry form below to submit an application. Our admissions team will get back to your email directly.
                     </p>
                 </div>
 
                 <div class="row align-items-stretch">
-                    <!-- Contact Form Column -->
+                    <!-- Admission Form Column -->
                     <div class="col-xl-6 col-lg-6 col-md-12" style="margin-bottom: 30px;">
                         <div class="form-box-wrapper">
-                            <h3 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 25px;">Send Us
-                                A Message</h3>
-                            <form id="contact-form" name="contact_form" action="#" method="post">
+                            <div style="margin-bottom: 20px;">
+                                <span style="color: #e66a0b; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Admissions 2026</span>
+                                <h3 style="font-size: 24px; font-weight: 800; color: #1a1a1a; margin-top: 4px;">Admission Application Form</h3>
+                            </div>
+
+                            <!-- Alert Box for Web3Forms Submission Status -->
+                            <div id="form-result" style="display: none; margin-bottom: 20px; padding: 12px 16px; border-radius: 8px; font-size: 14px;"></div>
+
+                            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                                <!-- Web3Forms Config (Dummy Access Key) -->
+                                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+                                <input type="hidden" name="subject" value="New Admission Inquiry - Academic Heights Public School">
+                                <input type="hidden" name="from_name" value="AHPS Admission Portal">
+                                <input type="checkbox" name="botcheck" style="display: none;">
+
                                 <div class="form-group-custom">
                                     <i class="fa fa-user input-icon"></i>
-                                    <input type="text" name="form_name" placeholder="Your Full Name" required>
+                                    <input type="text" name="parent_name" placeholder="Parent / Guardian Full Name" required>
                                 </div>
+
                                 <div class="form-group-custom">
-                                    <i class="fa fa-envelope input-icon"></i>
-                                    <input type="email" name="form_email" placeholder="Your Email Address" required>
+                                    <i class="fa fa-graduation-cap input-icon"></i>
+                                    <input type="text" name="student_name" placeholder="Student Full Name" required>
                                 </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group-custom">
+                                            <i class="fa fa-envelope input-icon"></i>
+                                            <input type="email" name="email" placeholder="Email Address" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group-custom">
+                                            <i class="fa fa-phone input-icon"></i>
+                                            <input type="tel" name="phone" placeholder="Phone Number" required>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="form-group-custom">
-                                    <i class="fa fa-phone input-icon"></i>
-                                    <input type="text" name="form_phone" placeholder="Phone Number">
+                                    <i class="fa fa-book input-icon"></i>
+                                    <select name="grade_applying" required style="color: #333;">
+                                        <option value="" disabled selected>Select Grade / Class Applying For</option>
+                                        <option value="Playgroup / Nursery">Playgroup / Nursery</option>
+                                        <option value="LKG / UKG">LKG / UKG</option>
+                                        <option value="Grade 1 - 5 (Primary)">Grade 1 - 5 (Primary)</option>
+                                        <option value="Grade 6 - 8 (Middle)">Grade 6 - 8 (Middle)</option>
+                                        <option value="Grade 9 - 10 (Secondary)">Grade 9 - 10 (Secondary)</option>
+                                    </select>
                                 </div>
-                                <div class="form-group-custom">
-                                    <i class="fa fa-tag input-icon"></i>
-                                    <input type="text" name="form_subject" placeholder="Subject / Inquiry Reason">
-                                </div>
+
                                 <div class="form-group-custom">
                                     <i class="fa fa-pencil input-icon"></i>
-                                    <textarea name="form_message" placeholder="Write your message here..."
-                                        required></textarea>
+                                    <textarea name="message" placeholder="Additional Notes / Questions (Optional)"></textarea>
                                 </div>
+
                                 <button type="submit" class="btn-one"
                                     style="width: 100%; border-radius: 8px; height: 54px; line-height: 54px; font-weight: 600; font-size: 16px;">
-                                    Submit Message <span class="flaticon-next"></span>
+                                    Submit Admission Application <span class="flaticon-next"></span>
                                 </button>
                             </form>
                         </div>
@@ -568,6 +610,65 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
+
+    <!-- Web3Forms Submission Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const resultAlert = document.getElementById('form-result');
+
+            if (form && resultAlert) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const formData = new FormData(form);
+                    const object = Object.fromEntries(formData);
+                    const json = JSON.stringify(object);
+
+                    resultAlert.style.display = "block";
+                    resultAlert.style.background = "#eff6ff";
+                    resultAlert.style.color = "#1d4ed8";
+                    resultAlert.style.border = "1px solid #bfdbfe";
+                    resultAlert.innerHTML = "<i class='fa fa-spinner fa-spin'></i> Submitting your admission application...";
+
+                    fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: json
+                    })
+                    .then(async (response) => {
+                        let resJson = await response.json();
+                        if (response.status === 200) {
+                            resultAlert.style.background = "#f0fdf4";
+                            resultAlert.style.color = "#15803d";
+                            resultAlert.style.border = "1px solid #bbf7d0";
+                            resultAlert.innerHTML = "<i class='fa fa-check-circle'></i> <strong>Application Sent!</strong> Thank you for your inquiry. Our admissions team will email you shortly.";
+                            form.reset();
+                        } else {
+                            resultAlert.style.background = "#fef2f2";
+                            resultAlert.style.color = "#b91c1c";
+                            resultAlert.style.border = "1px solid #fecaca";
+                            resultAlert.innerHTML = resJson.message || "Please replace YOUR_WEB3FORMS_ACCESS_KEY_HERE with your Web3Forms key to send real emails!";
+                        }
+                    })
+                    .catch(error => {
+                        resultAlert.style.background = "#fef2f2";
+                        resultAlert.style.color = "#b91c1c";
+                        resultAlert.style.border = "1px solid #fecaca";
+                        resultAlert.innerHTML = "<i class='fa fa-exclamation-triangle'></i> Submission error. Please check your network connection or Web3Forms API key.";
+                    });
+                });
+            }
+        });
+    </script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="http://wa.me/918050065050" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fa fa-whatsapp"></i>
+    </a>
 
 </body>
 
